@@ -1,0 +1,206 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <title>Document</title>
+    </head>
+    <body>
+    <!-- Section: Design Block -->
+    <section class="background-radial-gradient overflow-hidden">
+        <style>
+        
+        
+        .background-radial-gradient {
+    background: rgb(2, 0, 36);
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 17%, rgba(9,12,123,1) 44%, rgba(0,212,255,1) 87%);
+        }
+    
+        #radius-shape-1 {
+            height: 220px;
+            width: 220px;
+            top: -60px;
+            left: -130px;
+            background: radial-gradient(#44006b, #ad1fff);
+            overflow: hidden;
+        }
+    
+        #radius-shape-2 {
+            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+            bottom: -60px;
+            right: -110px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(#44006b, #ad1fff);
+            overflow: hidden;
+        }
+    
+        .bg-glass {
+            background-color: hsla(0, 22%, 85%, 0.9) !important;
+            backdrop-filter: saturate(200%) blur(25px);
+        }
+        .card-body {
+            border-radius: 5px;
+    background-color: white;}
+
+        
+        </style>
+
+
+<nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-xxl">
+        <a href="#intro" class="navbar-brand">
+            <span class="fw-bold text-secondary">
+                Ilocano's Laundry Shop
+            </span>
+        </a>
+        <!-- toogle button for mobile nav -->
+        <button class="navbar-toggler" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#main-nav" 
+        aria-controls="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- navbar-links -->
+    <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav" >
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#topics" class="nav-link text-light">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#reviews" class="nav-link text-light">Services</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link text-light">Price</a>
+            </li>
+            <li class="nav-item ">
+                <a href="#faq" class="nav-link text-light">FAQ</a>
+            </li>
+            <li class="nav-item ">
+                <a href="#contact us" class="nav-link text-light">Contact us</a>
+            </li>
+            <li class="nav-item ms-2 d-none d-md-inline text-light">
+                <a href="#pricing" class="btn btn-primary">Order now</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+    
+        <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+        <div class="row gx-lg-5 align-items-center mb-5">
+            <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+            <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                Ilocano's <br />
+                <span style="color: hsl(218, 81%, 75%)">Laundry Shop</span>
+            </h1>
+            <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Temporibus, expedita iusto veniam atque, magni tempora mollitia
+                dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+                ab ipsum nisi dolorem modi. Quos?
+            </p>
+            </div>
+    
+            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+           
+    
+            <div class="card bg-glass">
+                <div class="card-body px-4 py-5 px-md-5">
+                <form>
+                
+                    <!-- username input -->
+                    <div class="form-outline mb-4">
+                        <input type="text" id="username" class="form-control" />
+                        <label class="form-label" for="form3Example3">Username</label>
+                    </div>
+    
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                    <input type="email" id="email" class="form-control" />
+                    <label class="form-label" for="form3Example3">Email address</label>
+                    </div>
+    
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                    <input type="password" id="password" class="form-control" />
+                    <label class="form-label" for="form3Example4">Password</label>
+                    </div>
+    
+                
+                    
+
+    
+    
+                    
+                </form>
+                <div><!-- Submit button -->
+                    <button type="submit" class="btn btn-outline-primary btn-lg w-100"  id="signUp">
+                    Sign up
+                    </button></div>
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Already have an account? <a href="index.html" class="text-decoration-none">sign in</a></p>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Section: Design Block -->
+    </body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+    
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+        import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyB_HhT_S1DT9PBRG0-FmyZ3o8-bTdh2k9w",
+        authDomain: "softe-app.firebaseapp.com",
+        databaseURL: "https://softe-app-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "softe-app",
+        storageBucket: "softe-app.appspot.com",
+        messagingSenderId: "980868790742",
+        appId: "1:980868790742:web:2d7a393dd1768be2974c77"
+        };
+    
+        // Initialize Firebase
+        const signUp = document.getElementById('signUp');
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+        signUp.addEventListener('click',(e)=>{
+            
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+        // Signed in 
+            const user = userCredential.user;
+            set(ref(database,'user/'+user.uid),{
+                username:username,
+                email:email
+            })
+        alert('user created!');
+        // ...
+    }) 
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+        // ..
+    });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </html>
